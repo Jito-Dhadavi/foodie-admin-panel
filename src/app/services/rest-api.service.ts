@@ -15,6 +15,9 @@ export class RestApiService {
     console.log('params: ', params);
     return this.api.postData(this.api.signin, params)
   }
+  getUsers() {
+    return this.api.getData(this.api.users)
+  }
   getCategory() {
     return this.api.getData(this.api.category)
   }
@@ -27,4 +30,5 @@ export class RestApiService {
   deleteCategory(id) {
     return this.api.deleteData(this.api.category + '/' + id)
   }
+
 }

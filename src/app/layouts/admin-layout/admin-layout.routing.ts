@@ -10,6 +10,8 @@ import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 import { LoginComponent } from 'app/pages/login/login.component';
 import { ProfileComponent } from 'app/pages/profile/profile.component';
 import { CategoryComponent } from 'app/pages/category/category.component';
+import { UsersComponent } from 'app/pages/users/users.component';
+import { ProductComponent } from 'app/pages/product/product.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -17,9 +19,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'table',          component: TableComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'category',          component: CategoryComponent },
-    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'products',  component: ProductComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'profile',        component: ProfileComponent },
+    // { path: 'profile',        component: ProfileComponent },
+    { path: 'users',        component: UsersComponent },
 
 
 ];

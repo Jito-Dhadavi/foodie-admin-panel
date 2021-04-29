@@ -6,6 +6,7 @@ export class ApiConfiguration {
   readonly signup = 'signup';
   readonly socialLogin = 'social/login'
   readonly signin = 'signin'
+  readonly users = 'users'
   readonly category = 'category'
 
 }

@@ -16,6 +16,8 @@ import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component'
 import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from 'app/pages/profile/profile.component';
 import { CategoryComponent } from 'app/pages/category/category.component';
+import { UsersComponent } from 'app/pages/users/users.component';
+import { ProductComponent } from 'app/pages/product/product.component';
 
 @NgModule({
   imports: [
@@ -33,7 +35,9 @@ import { CategoryComponent } from 'app/pages/category/category.component';
     IconsComponent,
     NotificationsComponent,
     ProfileComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent,
+    UsersComponent,
   ],
   providers:[
     NgbActiveModal

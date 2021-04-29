@@ -1,0 +1,44 @@
+<div class=" content">
+    <div class=" row">
+      <div class=" col-md-12">
+        <div class=" card">
+          <div class=" card-header">
+            <h4 class=" card-title">Users</h4>
+          </div>
+          <div class=" card-body">
+            <div class=" table-responsive">
+              <table class=" table tablesorter" id="">
+                <thead class=" text-primary">
+                  <tr>
+                    <th>Avatar</th>
+                    <th>Name</th>
+                    <th>Mobile No</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>
+                      <div class="avatar">
+                        <img [src]="user.avatar" *ngIf="user.avatar" alt="">
+                        <img [src]="'assets/img/default-avatar.png'" *ngIf="!user.avatar" alt="">
+                      </div>
+                    </td>
+                    <td>{{user.name ? user.name : '-'}}</td>
+                    <td>{{user.mobileNo ? user.mobileNo:'-'}}</td>
+                    <td>{{user.email ? user.email:'-'}}</td>
+                    <td>{{user.status}}</td>
+                    <td>{{user.createdAt | date : 'dd-MM-yyyy'}}</td>
+                    <td>{{user.updatedAt | date : 'dd-MM-yyyy'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
