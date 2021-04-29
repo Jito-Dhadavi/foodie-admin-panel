@@ -9,8 +9,8 @@ import { RestApiService } from 'app/services/rest-api.service';
 })
 export class LoginComponent implements OnInit {
 
-  email;
-  password;
+  email='admin@foodie.com';
+  password='admin123';
   isLoading = false;
   constructor(private router: Router,
     private restApiService: RestApiService) { }
@@ -26,16 +26,16 @@ export class LoginComponent implements OnInit {
     this.isLoading = true;
     this.restApiService.login(params).then(res => {
       this.isLoading = false;
-      if (res) {
-        if (res.success) {
+        if (res && res.code===200) {
           const { data } = res;
           if (data.user.role === 'A') {
-            localStorage.setItem('user', JSON.stringify(data))
+            localStorage.setItem('admin', JSON.stringify(data))
             this.router.navigateByUrl('/dashboard')
           }
+        }else{
+
         }
 
-      }
     }).catch(err => {
       this.isLoading = false;
       console.log('err: ', err);

@@ -13,7 +13,9 @@ import { IconsComponent }           from '../../pages/icons/icons.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from 'app/pages/profile/profile.component';
+import { CategoryComponent } from 'app/pages/category/category.component';
 
 @NgModule({
   imports: [
@@ -30,6 +32,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TypographyComponent,
     IconsComponent,
     NotificationsComponent,
+    ProfileComponent,
+    CategoryComponent
+  ],
+  providers:[
+    NgbActiveModal
   ]
 })
 

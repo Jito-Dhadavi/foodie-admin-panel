@@ -18,13 +18,18 @@ import { ApiCallService } from "./services/api/api-call.service";
 import { HttpClientModule } from "@angular/common/http";
 import { RestApiService } from "./services/rest-api.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+// import { CategoryComponent } from './pages/category/category.component';
+// import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    // CategoryComponent,
+    // ProfileComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -36,7 +41,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FixedPluginModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     ApiConfiguration,
