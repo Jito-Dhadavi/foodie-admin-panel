@@ -134,4 +134,45 @@ export class ApiCallService extends ApiConfiguration {
         );
     });
   }
+  public postDataWithImage(subUrl: string, data: any, token = true): Promise<any> {
+    const form_data = new FormData();
+    for (const key in data) {
+      if (key === 'image') {
+        form_data.append('image', data[key], data[key].name);
+      } else {
+        form_data.append(key, data[key]);
+      }
+    }
+    return new Promise((resolve, reject) => {
+      const request: string = this.baseUrl + subUrl;
+      this.http.post(request, form_data, token ? this.getHeader() : {})
+        .subscribe(
+          res => resolve(res),
+          error => {
+            console.log('Main Error :', error);
+            reject(error);
+          }
+        );
+    });
+  }
+  public putWithImage(subUrl: string, data: any, token = true): Promise<any> {
+    const form_data = new FormData();
+    console.log('data: ', data);
+    for (const key in data) {
+      if (key && key === 'image') {
+        form_data.append('image', data[key], data[key] && data[key].name);
+      } else {
+        form_data.append(key, data[key]);
+      }
+    }
+    return new Promise((resolve, reject) => {
+      const request: string = this.baseUrl + subUrl;
+      this.http
+        .put(request, form_data, token ? this.getHeader() : {})
+        .subscribe(
+          res => resolve(res),
+          error => reject(error)
+        );
+    });
+  }
 }

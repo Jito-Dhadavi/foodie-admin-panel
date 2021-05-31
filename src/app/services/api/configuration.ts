@@ -8,5 +8,6 @@ export class ApiConfiguration {
   readonly signin = 'signin'
   readonly users = 'users'
   readonly category = 'category'
-
+  readonly products = 'products'
+  readonly product = 'product'
 }

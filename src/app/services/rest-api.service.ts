@@ -30,5 +30,16 @@ export class RestApiService {
   deleteCategory(id) {
     return this.api.deleteData(this.api.category + '/' + id)
   }
-
+  getProducts() {
+    return this.api.getData(this.api.products)
+  }
+  addProduct(data) {
+    return this.api.postDataWithImage(this.api.product, data)
+  }
+  deleteProduct(id) {
+    return this.api.deleteData(this.api.product + '/' + id)
+  }
+  editProduct(id, params) {
+    return this.api.putWithImage(this.api.product + '/' + id, params)
+  }
 }
