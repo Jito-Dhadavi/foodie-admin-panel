@@ -12,7 +12,6 @@ export class RestApiService {
     return this.api.postData(this.api.signup, params)
   }
   login(params) {
-    console.log('params: ', params);
     return this.api.postData(this.api.signin, params)
   }
   getUsers() {
@@ -41,5 +40,8 @@ export class RestApiService {
   }
   editProduct(id, params) {
     return this.api.putWithImage(this.api.product + '/' + id, params)
+  }
+  getOrders(){
+    return this.api.getData(this.api.orders)
   }
 }

@@ -12,6 +12,7 @@ import { ProfileComponent } from 'app/pages/profile/profile.component';
 import { CategoryComponent } from 'app/pages/category/category.component';
 import { UsersComponent } from 'app/pages/users/users.component';
 import { ProductComponent } from 'app/pages/product/product.component';
+import { OrdersComponent } from 'app/pages/orders/orders.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -23,6 +24,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     // { path: 'profile',        component: ProfileComponent },
     { path: 'users',        component: UsersComponent },
+    { path: 'orders',        component: OrdersComponent },
+
 
 
 ];

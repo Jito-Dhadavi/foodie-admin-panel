@@ -27,7 +27,7 @@
                                     <td>{{product.categoryId && product.categoryId.name ? product.categoryId.name:'-'}}
                                     </td>
                                     <td>
-                                        <div class="avatar">
+                                        <div class="avatar avatar-block">
                                             <img [src]="baseUrl + product.image" *ngIf="product.image" alt="">
                                             <img [src]="'assets/img/default-avatar.png'" *ngIf="!product.image" alt="">
                                         </div>

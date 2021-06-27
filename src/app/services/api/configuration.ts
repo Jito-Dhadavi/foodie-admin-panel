@@ -10,4 +10,6 @@ export class ApiConfiguration {
   readonly category = 'category'
   readonly products = 'products'
   readonly product = 'product'
+  readonly orders = 'orders'
+
 }

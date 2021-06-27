@@ -19,11 +19,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { RestApiService } from "./services/rest-api.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { ProductComponent } from './pages/product/product.component';
-import { UsersComponent } from './pages/users/users.component';
-// import { CategoryComponent } from './pages/category/category.component';
-// import { ProfileComponent } from './pages/profile/profile.component';
-
 
 @NgModule({
   declarations: [
