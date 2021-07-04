@@ -44,4 +44,7 @@ export class RestApiService {
   getOrders(){
     return this.api.getData(this.api.orders)
   }
+  getStats(){
+    return this.api.getData(this.api.stats)
+  }
 }
