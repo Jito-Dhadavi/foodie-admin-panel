@@ -94,9 +94,6 @@ export class NavbarComponent implements OnInit {
     }
 
   }
-  onProfile() {
-    this.router.navigateByUrl('/profile')
-  }
   onLogout() {
     localStorage.clear()
     this.router.navigateByUrl('/login')
