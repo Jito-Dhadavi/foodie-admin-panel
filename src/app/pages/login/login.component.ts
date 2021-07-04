@@ -9,8 +9,8 @@ import { RestApiService } from 'app/services/rest-api.service';
 })
 export class LoginComponent implements OnInit {
 
-  email='admin@foodie.com';
-  password='admin123';
+  email='';
+  password='';
   isLoading = false;
   constructor(private router: Router,
     private restApiService: RestApiService) { }
