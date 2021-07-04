@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from 'app/services/rest-api.service';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-users',
@@ -9,6 +10,8 @@ import { RestApiService } from 'app/services/rest-api.service';
 export class UsersComponent implements OnInit {
 
   users = []
+  baseUrl = environment.baseUrl;
+
   constructor(private restApiService: RestApiService) { }
 
   ngOnInit() {

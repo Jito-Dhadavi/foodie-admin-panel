@@ -23,7 +23,7 @@
                   <tr *ngFor="let user of users">
                     <td>
                       <div class="avatar">
-                        <img [src]="user.avatar" *ngIf="user.avatar" alt="">
+                        <img [src]="baseUrl + user.avatar" *ngIf="user.avatar" alt="">
                         <img [src]="'assets/img/default-avatar.png'" *ngIf="!user.avatar" alt="">
                       </div>
                     </td>

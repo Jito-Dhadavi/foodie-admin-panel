@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RestApiService } from 'app/services/rest-api.service';
@@ -11,7 +12,7 @@ export class OrdersComponent implements OnInit {
 
   orders = []
   selectedproduct
-  baseUrl = 'http://localhost:5000/';
+  baseUrl = environment.baseUrl;
   constructor(private restApiService: RestApiService, private modalService: NgbModal, public activeModal: NgbActiveModal) { }
 
   ngOnInit() {

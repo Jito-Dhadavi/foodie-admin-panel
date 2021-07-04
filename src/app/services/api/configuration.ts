@@ -1,8 +1,8 @@
+import { environment } from './../../../environments/environment';
 
-import { apiUrl } from '../../configuration/api';
 
 export class ApiConfiguration {
-  protected baseUrl: string = apiUrl;
+  protected baseUrl: string = environment.apiUrl;
   readonly signup = 'signup';
   readonly socialLogin = 'social/login'
   readonly signin = 'signin'

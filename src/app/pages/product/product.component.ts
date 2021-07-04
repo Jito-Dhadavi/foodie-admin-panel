@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RestApiService } from 'app/services/rest-api.service';
+import { environment } from 'environments/environment';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 export class ProductComponent implements OnInit {
 
   products = [];
-  baseUrl = 'http://localhost:5000/';
+  baseUrl = environment.baseUrl;
   closeResult: string;
   categories = [];
   product = {
